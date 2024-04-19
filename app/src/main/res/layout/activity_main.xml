@@ -15,11 +15,12 @@
         android:layout_marginStart="1dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="1dp"
+        android:layout_marginBottom="9dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,7 +28,7 @@
         android:id="@+id/textInputLayoutUsername"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="17dp"
+        android:layout_marginBottom="18dp"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayoutPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,10 +38,10 @@
             android:id="@+id/editTextUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Username"
-            android:textColor="@color/grey"
             android:backgroundTint="@color/white"
-            android:inputType="text" />
+            android:hint="Enter Username"
+            android:inputType="text"
+            android:textColor="@color/grey" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -58,17 +59,17 @@
             android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Password"
-            android:textColor="@color/grey"
             android:backgroundTint="@color/white"
-            android:inputType="textPassword" />
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:textColor="@color/grey" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonLogin"
         android:layout_width="183dp"
-        android:layout_height="45dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="174dp"
         android:text="Login"
         app:layout_constraintBottom_toTopOf="@+id/buttonSignUp"
@@ -79,20 +80,22 @@
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textView"
         android:layout_width="155dp"
-        android:layout_height="38dp"
+        android:layout_height="0dp"
         android:layout_marginStart="84dp"
         android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
         android:text="Not A Member?"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/buttonSignUp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonSignUp"
         android:layout_width="114dp"
-        android:layout_height="42dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="46dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginBottom="10dp"
         android:text="SignUp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,14 +103,13 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageButton"
-        android:layout_width="195dp"
-        android:layout_height="155dp"
-        android:layout_marginTop="109dp"
-        android:layout_marginBottom="22dp"
+        android:layout_width="202dp"
+        android:layout_height="162dp"
+        android:layout_marginBottom="7dp"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayoutUsername"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
         app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("kotlin-kapt")
 }
 
 android {
@@ -33,6 +34,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
@@ -50,5 +54,8 @@ dependencies {
     implementation("androidx.recyclerview:recyclerview:1.2.1")
     implementation("com.squareup.okhttp3:okhttp:4.9.1")
     implementation("com.google.android.material:material:1.4.0")
+    implementation ("androidx.room:room-runtime:2.2.5")
+    implementation ("androidx.room:room-ktx:2.2.5")
+    kapt ("androidx.room:room-compiler:2.2.5")
 
 }

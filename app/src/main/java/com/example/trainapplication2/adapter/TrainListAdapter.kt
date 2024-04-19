@@ -1,10 +1,12 @@
-package com.example.trainapplication2
+package com.example.trainapplication2.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.trainapplication2.R
+import com.example.trainapplication2.Train
 
 class TrainListAdapter(private val trainList: ArrayList<Train>) : RecyclerView.Adapter<TrainListAdapter.TrainViewHolder>() {
 

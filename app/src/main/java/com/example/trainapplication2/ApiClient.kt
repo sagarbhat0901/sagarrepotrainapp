@@ -2,6 +2,8 @@ import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import java.io.IOException
 // testrug
+
+// test 2
 class ApiClient private constructor() {
 
     private val client: OkHttpClient = OkHttpClient()
